@@ -28,9 +28,11 @@ A "hello world"-style COBOL program that demonstrates essential COBOL syntax and
 See the README in [hello-world/](hello-world/).
 
 
-### `database/`
+### `gix-sql/`
 
-TODO: Explore database connectivity options with GnuCOBOL.
+Exploring SQL support for GnuCOBOL with GixSQL.
+
+See the README in [gix-sql/](gix-sql/).
 
 
 ### `ebcdic/` 
@@ -77,7 +79,9 @@ General clean-ups, TODOs and things I wish to implement for this project:
 * [ ] Learn about COBOL's file handling features (sequential, indexed, relative)
 * [ ] Understand COBOL's decimal arithmetic and its advantages for financial calculations
 * [ ] Explore calling C functions from COBOL programs
-* [ ] IN PROGRESS (AI drafted; need to prune it down) Create comprehensive hello-world example with full COBOL boilerplate
+* [ ] (AI drafted; need to prune it down) Create comprehensive hello-world example with full COBOL boilerplate
+* [x] DONE I want a [GixSQL](https://github.com/mridoni/gixsql) example
+      * (Answer: yes) Can/should I try running in a container? I'm curious if building gixsql from source is best, and to do that I don't really want to try that on macOS. Plus containers + Claude Code is a good synergy already.
 
 
 ## Reference
