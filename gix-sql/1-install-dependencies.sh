@@ -15,5 +15,7 @@ apt-get install -y -q --no-install-recommends \
     pkg-config libspdlog-dev libfmt-dev git ca-certificates \
     gnucobol4 libcob5 libcob5-dev
 
+update-ca-certificates
+
 apt-get clean
 rm -rf /var/lib/apt/lists/*

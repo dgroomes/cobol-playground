@@ -29,15 +29,15 @@ Follow these instructions to build and run the example program on a Linux system
 1. Pre-requisite: Linux environment
 2. Install dependencies
    * ```bash
-     ./install-dependencies.sh
+     ./1-install-dependencies.sh
      ```
 3. Build GixSQL from source
    * ```bash
-     ./build-gixsql.sh
+     ./2-build-gixsql.sh
      ```
 4. Run the example
    * ```bash
-     ./run-example.sh
+     ./3-run-example.sh
      ```
    * You should see output like:
    * ```text
