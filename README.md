@@ -1,17 +1,42 @@
 # cobol-playground
 
-**NOTE**: This is AI sloppy (although very much appreciated). I need to edit it down.
-
-📚 Learning and exploring COBOL with GnuCOBOL.
+📚 Learning and exploring [COBOL][cobol-wiki] with [GnuCOBOL][gnucobol-wiki].
 
 
 ## Overview
 
-COBOL (Common Business-Oriented Language) is a programming language designed for business data processing needs. Despite being created in 1959, it remains widely used in financial institutions and government systems. This playground explores COBOL using GnuCOBOL, an open-source COBOL compiler that translates COBOL code to C before compiling to native machine code.
+I'd like to better learn COBOL. This repository is me doing that by example programs.
 
-This repository demonstrates fundamental COBOL concepts through practical examples, focusing on the language's unique syntax and structure.
+Most COBOL in the world is hosted on IBM mainframes:
 
-**NOTE**: This project was developed on macOS. It is for my own personal use.
+- Compiled using [IBM's Enterprise COBOL compiler][ibm-cobol]
+- Running under the [IBM z/OS][ibm-z-os-wiki] operating system
+- Physicallly running on [IBM Z][ibm-z-wiki] mainframe hardware
+
+That platform is mostly inaccessible to individual learners, like what I'm representing right now with this `cobol-playground`.
+Instead, we can build and run COBOL on Linux/macOS using GnuCOBOL. That's what I'm using.
+
+Note: I recommend [IBM Z Xplore][ibm-z-xplore] to learn IBM Z in earnest and on the real platform. It covers some COBOL, and a ton
+of other content. 
+
+
+## GnuCOBOL Installation
+
+I'm on macOS and I followed these steps to install GnuCOBOL.
+
+1. Pre-requisite: Homebrew
+2. Install GnuCOBOL
+   - ```shell
+     brew install gnucobol
+     ```
+3. Verify the installation
+   - ```shell
+     cobc --version
+     ```
+   - You should see output like the following.
+   - ```text
+     cobc (GnuCOBOL) 3.2.0
+     ```
 
 
 ## Standalone subprojects
@@ -35,63 +60,28 @@ Exploring SQL support for GnuCOBOL with GixSQL.
 See the README in [gix-sql/](gix-sql/).
 
 
-### `ebcdic/` 
-
-TODO: Investigate EBCDIC file handling capabilities.
-
-
-## Instructions
-
-Follow these instructions to get started with GnuCOBOL on macOS.
-
-1. Pre-requisite: Homebrew
-   * GnuCOBOL can be installed via Homebrew on macOS
-2. Install GnuCOBOL
-   * ```shell
-     brew install gnucobol
-     ```
-3. Verify installation
-   * ```shell
-     cobc --version
-     ```
-   * You should see output like:
-   * ```text
-     cobc (GnuCOBOL) 3.2.0
-     ...
-     ```
-
-
-## C Toolchain Requirements
-
-GnuCOBOL translates COBOL source code to C, then uses the system's C compiler to produce executables. On macOS, this typically uses the Clang compiler that comes with Xcode Command Line Tools. If you have Homebrew installed, you likely already have the necessary C toolchain. Otherwise, install it with:
-
-```shell
-xcode-select --install
-```
-
-
 ## Wish List
 
 General clean-ups, TODOs and things I wish to implement for this project:
 
-* [ ] Explore database connectivity options (official vs third-party solutions)
-* [ ] Investigate EBCDIC file handling capabilities
-* [ ] Learn about COBOL's file handling features (sequential, indexed, relative)
-* [ ] Understand COBOL's decimal arithmetic and its advantages for financial calculations
-* [ ] Explore calling C functions from COBOL programs
-* [ ] (AI drafted; need to prune it down) Create comprehensive hello-world example with full COBOL boilerplate
-* [x] DONE I want a [GixSQL](https://github.com/mridoni/gixsql) example
-      * (Answer: yes) Can/should I try running in a container? I'm curious if building gixsql from source is best, and to do that I don't really want to try that on macOS. Plus containers + Claude Code is a good synergy already.
+- [x] DONE Re-write README for my own voice. Plan out wish list itmes.
+- [ ] Explore calling C functions from a COBOL program
+- [ ] (AI drafted; need to prune it down) Create comprehensive hello-world example with full COBOL boilerplate
+- [x] DONE I want a [GixSQL](https://github.com/mridoni/gixsql) example
+      - (Answer: yes) Can/should I try running in a container? I'm curious if building gixsql from source is best, and to do that I don't really want to try that on macOS. Plus containers + Claude Code is a good synergy already.
+- [ ] More layouts. I want to better understand what struct-like things (a layout?) can be expressed via COBOL.
 
 
 ## Reference
 
-* [Wikipedia: *GnuCOBOL*][gnucobol-wiki]
-* [GnuCOBOL Official Site][gnucobol-official]
-* [GnuCOBOL Programmer's Guide][gnucobol-guide]
-* [COBOL Language Reference][cobol-ref]
+- [GnuCOBOL Official Site][gnucobol-official]
+- [Wikipedia: *COBOL*][cobol-wiki]
+- [Wikipedia: *GnuCOBOL*][gnucobol-wiki]
 
-[gnucobol-wiki]: https://en.wikipedia.org/wiki/GnuCOBOL
+[cobol-wiki]: https://en.wikipedia.org/wiki/COBOL
+[ibm-cobol]: https://www.ibm.com/products/cobol-compiler-zos?utm_source=chatgpt.com
+[ibm-z-os-wiki]: https://en.wikipedia.org/wiki/Z/OS
+[ibm-z-xplore]: https://www.ibm.com/products/z/resources/zxplore
+[ibm-z-wiki]: https://en.wikipedia.org/wiki/IBM_Z
 [gnucobol-official]: https://www.gnu.org/software/gnucobol/
-[gnucobol-guide]: https://gnucobol.sourceforge.io/guides.html
-[cobol-ref]: https://www.ibm.com/docs/en/cobol-zos
+[gnucobol-wiki]: https://en.wikipedia.org/wiki/GnuCOBOL
