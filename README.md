@@ -20,25 +20,6 @@ Note: I recommend [IBM Z Xplore][ibm-z-xplore] to learn IBM Z in earnest and on 
 of other content. 
 
 
-## GnuCOBOL Installation
-
-I'm on macOS and I followed these steps to install GnuCOBOL.
-
-1. Pre-requisite: Homebrew
-2. Install GnuCOBOL
-   - ```shell
-     brew install gnucobol
-     ```
-3. Verify the installation
-   - ```shell
-     cobc --version
-     ```
-   - You should see output like the following.
-   - ```text
-     cobc (GnuCOBOL) 3.2.0
-     ```
-
-
 ## Standalone subprojects
 
 This repository illustrates different concepts, patterns and examples via standalone subprojects. Each subproject is completely independent of the others and do not depend on the root project. This _standalone subproject constraint_ forces the subprojects to be complete and maximizes the reader's chances of successfully running, understanding, and re-using the code.
