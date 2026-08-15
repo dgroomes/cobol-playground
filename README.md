@@ -29,7 +29,7 @@ The subprojects include:
 
 ### `hello-world/`
 
-A "hello world"-style COBOL program that demonstrates essential COBOL syntax and structure.
+A "hello world" COBOL program.
 
 See the README in [hello-world/](hello-world/).
 
@@ -47,7 +47,7 @@ General clean-ups, TODOs and things I wish to implement for this project:
 
 - [x] DONE Re-write README for my own voice. Plan out wish list itmes.
 - [ ] Explore calling C functions from a COBOL program
-- [ ] (AI drafted; need to prune it down) Create comprehensive hello-world example with full COBOL boilerplate
+- [ ] SKIP (no, I just want a compilable/runnable hell world. I don't need to examples that can gleaned easily from docs. I just need my own waypoint runnable reference) (AI drafted; need to prune it down) Create comprehensive hello-world example with full COBOL boilerplate
 - [x] DONE I want a [GixSQL](https://github.com/mridoni/gixsql) example
       - (Answer: yes) Can/should I try running in a container? I'm curious if building gixsql from source is best, and to do that I don't really want to try that on macOS. Plus containers + Claude Code is a good synergy already.
 - [ ] More layouts. I want to better understand what struct-like things (a layout?) can be expressed via COBOL.
